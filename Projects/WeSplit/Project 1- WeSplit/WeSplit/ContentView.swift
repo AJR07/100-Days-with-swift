@@ -32,12 +32,16 @@ struct ContentView: View {
                 Section{
                     TextField("Amount", text: $checkAmount)// as the iser types, the property will be updated
                         .keyboardType(.decimalPad)
-                    
+                    /*
                     Picker("Number of people", selection: $numberOfPeople){
                         ForEach(2 ..< 100){
                             Text("\($0) people")
                         }
                     }
+ */
+                    TextField("Number of people", text: $checkAmount)
+                        .keyboardType(.numberPad)
+                        
                 }
                 Section(header:Text("How much tip do you want to leave?")){
                     Picker("Tip percentage", selection: $tipPercentage){
@@ -47,8 +51,11 @@ struct ContentView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
-                Section{
+                Section(header: Text("Amount per person")){
                     Text("$\(totalPerPerson, specifier: "0.2f")")
+                }
+                Section(header: Text("Total Bill")){
+                    Text("$\(totalPerPerson * Double(numberOfPeople + 2))")
                 }
             }
             .navigationBarTitle("WeSplit")
