@@ -17,7 +17,7 @@ struct ContentView: View {
     var PointAdd:Double{
         if (WinOrLose == true){
             if (selection == 1){
-                
+                //never completed cuz too lazy :(
             }
         }
     }
