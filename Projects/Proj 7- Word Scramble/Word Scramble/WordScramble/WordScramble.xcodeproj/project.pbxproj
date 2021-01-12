@@ -11,6 +11,7 @@
 		3A98A11E25AC8D2200BFB490 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A11D25AC8D2200BFB490 /* ContentView.swift */; };
 		3A98A12025AC8D2400BFB490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A11F25AC8D2400BFB490 /* Assets.xcassets */; };
 		3A98A12325AC8D2400BFB490 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A98A12225AC8D2400BFB490 /* Preview Assets.xcassets */; };
+		3AA2544725AD925600F35CB4 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AA2544625AD925500F35CB4 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		3A98A11F25AC8D2400BFB490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A98A12225AC8D2400BFB490 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A98A12425AC8D2400BFB490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA2544625AD925500F35CB4 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = start.txt; path = "../../../../../Sample Code:Files/SwiftUI/project5-files/start.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				3A98A11B25AC8D2200BFB490 /* WordScrambleApp.swift */,
 				3A98A11D25AC8D2200BFB490 /* ContentView.swift */,
 				3A98A11F25AC8D2400BFB490 /* Assets.xcassets */,
+				3AA2544625AD925500F35CB4 /* start.txt */,
 				3A98A12425AC8D2400BFB490 /* Info.plist */,
 				3A98A12125AC8D2400BFB490 /* Preview Content */,
 			);
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A98A12325AC8D2400BFB490 /* Preview Assets.xcassets in Resources */,
+				3AA2544725AD925600F35CB4 /* start.txt in Resources */,
 				3A98A12025AC8D2400BFB490 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
