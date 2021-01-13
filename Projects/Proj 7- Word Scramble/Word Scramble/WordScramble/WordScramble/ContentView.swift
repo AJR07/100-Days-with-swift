@@ -10,6 +10,7 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
 
+    @State private var score = 0
     var body: some View {
         NavigationView {
             VStack {
@@ -22,18 +23,25 @@ struct ContentView: View {
                     Image(systemName: "\($0.count).circle")
                     Text($0)
                 }
+                Text("Your current score is: \(score)")
             }
             .navigationBarTitle(rootWord)
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
             }
+            .navigationBarItems(leading: Button(action: {
+                startGame()
+            }, label: {
+                Text("Regenerate Word")
+            }))
         }
     }
 
     func addNewWord() {
         // lowercase and trim the word, to make sure we don't add duplicate words with case differences
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        updateScore(word: answer)
 
         // exit if the remaining string is empty
         guard answer.count > 0 else {
@@ -58,7 +66,9 @@ struct ContentView: View {
         usedWords.insert(answer, at: 0)
         newWord = ""
     }
-
+    func updateScore(word: String) {
+        score += word.count
+    }
     func startGame() {
         // 1. Find the URL for start.txt in our app bundle
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
@@ -101,6 +111,10 @@ struct ContentView: View {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+        
+        if ((word.count) < 4){
+            return false
+        }
 
         return misspelledRange.location == NSNotFound
     }
