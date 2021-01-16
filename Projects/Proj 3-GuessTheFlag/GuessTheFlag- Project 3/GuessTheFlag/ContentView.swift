@@ -30,15 +30,14 @@ struct ContentView: View {
                     Button(action: {
                         right = self.flagTapped(number)
                         flag = number
-                        rotation3DEffect(
-                            .degrees(360),
-                            axis: (x: 0, y: 1, z: 0))
+
                     }){
                         Image(self.countries[number])
                             .renderingMode(.original)
                             .clipShape(Capsule())
                             .overlay(Capsule().stroke(Color.black, lineWidth: 1))
                             .shadow(color: .black, radius: 2)
+                        
                             
                     }
                 }
