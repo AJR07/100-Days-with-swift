@@ -9,6 +9,7 @@ struct ContentView: View {
 
     @State private var flag = 0
     @State private var Score = 0
+    @State private var right  = true
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
@@ -25,23 +26,27 @@ struct ContentView: View {
                         .fontWeight(.black)
                 }
 
-                ForEach(0 ..< 3) { number in
+               ForEach(0 ..< 3) { number in
                     Button(action: {
-                        self.flagTapped(number)
+                        right = self.flagTapped(number)
                         flag = number
-                    }) {
+                        rotation3DEffect(
+                            .degrees(360),
+                            axis: (x: 0, y: 1, z: 0))
+                    }){
                         Image(self.countries[number])
                             .renderingMode(.original)
                             .clipShape(Capsule())
                             .overlay(Capsule().stroke(Color.black, lineWidth: 1))
                             .shadow(color: .black, radius: 2)
+                            
                     }
                 }
                 Section{
                     Text("Your score is \(Score)")
                         .colorInvert()
+                        
                 }
-
                 Spacer()
                 
             }
@@ -53,14 +58,15 @@ struct ContentView: View {
         }
     }
 
-    func flagTapped(_ number: Int) {
+    func flagTapped(_ number: Int) -> Bool {
         if number == correctAnswer {
             scoreTitle = "Correct"
             Score += 1
+            return true
         } else {
             scoreTitle = "Wrong"
+            return false
         }
-
         showingScore = true
     }
 
