@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A97B9D525C434B500A964BA /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97B9D425C434B500A964BA /* MissionView.swift */; };
 		3AA22C1B25BD3DC900B7A5F5 /* MoonShotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22C1A25BD3DC900B7A5F5 /* MoonShotApp.swift */; };
 		3AA22C1D25BD3DC900B7A5F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22C1C25BD3DC900B7A5F5 /* ContentView.swift */; };
 		3AA22C1F25BD3DCA00B7A5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA22C1E25BD3DCA00B7A5F5 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A97B9D425C434B500A964BA /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		3AA22C1725BD3DC900B7A5F5 /* MoonShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA22C1A25BD3DC900B7A5F5 /* MoonShotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonShotApp.swift; sourceTree = "<group>"; };
 		3AA22C1C25BD3DC900B7A5F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				3AA22C1A25BD3DC900B7A5F5 /* MoonShotApp.swift */,
 				3AA22C1C25BD3DC900B7A5F5 /* ContentView.swift */,
+				3A97B9D425C434B500A964BA /* MissionView.swift */,
 				3AE4D47C25C1975F009C703E /* Misson.swift */,
 				3AE4D47625C1950C009C703E /* Astronaut.swift */,
 				3AE4D47925C1954E009C703E /* Bundle-Decodable.swift */,
@@ -160,6 +163,7 @@
 				3AA22C1D25BD3DC900B7A5F5 /* ContentView.swift in Sources */,
 				3AA22C1B25BD3DC900B7A5F5 /* MoonShotApp.swift in Sources */,
 				3AE4D47A25C1954E009C703E /* Bundle-Decodable.swift in Sources */,
+				3A97B9D525C434B500A964BA /* MissionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
